@@ -12,7 +12,7 @@ function App() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [weatherData, setweatherData] = useState([]);
 
-    const API = `https://api.weatherapi.com/v1/forecast.json?key=db5e238602fb4f4ba9a150153221610&q=${city}&days=${7}&aqi=no&alerts=no`;
+    const API = `https://api.weatherapi.com/v1/forecast.json?key=3c73f8adbfd74efc93092000221611&q=${city}&days=${7}&aqi=no&alerts=no`;
 
     useEffect(() => {
         fetch(API)

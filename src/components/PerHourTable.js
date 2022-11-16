@@ -12,6 +12,7 @@ function PerHourTable({ days, activeTabDay }) {
                             ? "border_right"
                             : ""
                     }
+                    key={hour}
                 >
                     {hour + " :00"}
                 </th>
@@ -28,6 +29,7 @@ function PerHourTable({ days, activeTabDay }) {
                             ? "border_right"
                             : ""
                     }
+                    key={hour}
                 >
                     <img
                         src={days[activeTabDay].hour[hour].condition.icon}
@@ -47,6 +49,7 @@ function PerHourTable({ days, activeTabDay }) {
                             ? "border_right"
                             : ""
                     }
+                    key={hour}
                 >
                     {days[activeTabDay].hour[hour].temp_c > 0
                         ? "+" + days[activeTabDay].hour[hour].temp_c + "°"
@@ -64,6 +67,7 @@ function PerHourTable({ days, activeTabDay }) {
                             ? "border_right"
                             : ""
                     }
+                    key={hour}
                 >
                     {days[activeTabDay].hour[hour].feelslike_c > 0
                         ? "+" + days[activeTabDay].hour[hour].feelslike_c + "°"
@@ -82,6 +86,7 @@ function PerHourTable({ days, activeTabDay }) {
                             ? "border_right"
                             : ""
                     }
+                    key={hour}
                 >
                     {days[activeTabDay].hour[hour].wind_kph}
                 </td>
@@ -98,6 +103,7 @@ function PerHourTable({ days, activeTabDay }) {
                             ? "border_right"
                             : ""
                     }
+                    key={hour}
                 >
                     {days[activeTabDay].hour[hour].chance_of_rain + "%"}
                 </td>
@@ -114,6 +120,7 @@ function PerHourTable({ days, activeTabDay }) {
                             ? "border_right"
                             : ""
                     }
+                    key={hour}
                 >
                     {days[activeTabDay].hour[hour].chance_of_snow + "%"}
                 </td>
