@@ -1,5 +1,6 @@
 import CurrentConditions from "./CurrentConditions";
 import PerHourTable from "./PerHourTable";
+// import "./weather_content_box.css";
 
 function WeatherContent({ currentConditions, days, activeTabDay }) {
     return (

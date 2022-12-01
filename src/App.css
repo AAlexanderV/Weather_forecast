@@ -1,19 +1,22 @@
 .header{
     width: 100%;
-    height: 285px;
+    height:fit-content;
 }
 
 .header_top{
     width: 100%;
-    height: 200px;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
     width: 40%;
-    height: 200px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
 }
 .logo img {
     width: 200px;
@@ -84,4 +87,269 @@
 }
 .header_bottom p strong{
     color:black;
+}
+
+/* ////WeatherTable//// */
+.weather-table {
+    height: fit-content;
+    min-height: 400px;
+    width: 100%;
+}
+
+/* /////TabsDays///// */
+.tabs_days{
+    height: 40%;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.slick-arrow.slick-next {
+    right: -10px;
+}
+.slick-arrow.slick-prev {
+    left: -35px;
+}
+.slick-prev::before, .slick-next::before{
+    background: rgb(255, 204, 0);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.slick-track{
+    padding-top: 10px;
+}
+.slick-slide div:last-child{
+    margin-right: 5px;
+}
+.slick-slide div{
+    margin: 0 5px 0 5px;
+}
+
+.tab_day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92px;
+    padding: 10px 5px 5px 5px;
+    border-radius: 10px;
+    border: 1px solid rgba(200, 200, 200, 0.62);
+    border-right-style: none;
+    cursor: pointer;
+    /* z-index: 30; */
+}
+.tab_day:last-child{
+    border-right-style: solid;
+}
+.tab_day.active{
+    box-shadow: 0 -3px 8px rgb(64 60 67 / 50%);
+    background-color: #f2f2f2;
+    z-index: 1;
+    border-bottom-style: none;
+    font-weight: bold;
+}
+
+.day_name{
+    margin-top: 10px;
+}
+.date{
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 24px;
+}
+.month{
+    margin-bottom: 10px;
+}
+.tab_day_condition_img img{
+    width: 60px;
+    height: 60px;
+    margin-top: 5px;
+}
+.max-min_temperature{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.max-min_temperature span{
+    border-left: 1px solid #dadce0;
+    height: 50px;
+    width: 0;
+    margin: 0 5px;
+}
+.max-min_temperature div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 38px;
+}
+.max-min_temperature p{
+    color: #9d9d9d;
+    font-size: 11px;
+}
+.max-min_temperature h3{
+    font-size: 17px;
+    color: #000;
+}
+
+/* /////// */
+/* ////WeatherContent//// */
+/* /////// */
+.weather_content_box{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    margin-top: 8px;
+    padding: 10px;
+    box-shadow: 0 0 8px rgb(64 60 67 / 50%);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.left_weather_content_box{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}
+
+.current_conditions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+}
+
+.chosen_day_name{
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 17px;
+}
+.chosen_date{
+    font-weight: bold;
+    font-size: 54px;
+}
+.chosen_month{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.current_conditions p{
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px 0 0 5px;
+    color: #777;
+}
+.condition_img{
+    height: fit-content;
+    width: fit-content;
+}
+.condition_img img{
+    width: 80;
+    height: 80px;
+}
+.current_temp{
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 1;
+}
+.sun_rise-set{
+    margin-top: 5px;
+}
+.sun_rise-set p{
+    font-size: 16px;
+    color: #000;
+    margin-top: 5px;
+}
+.sun_rise-set p span{
+    font-size: 14px;
+    font-weight: normal;
+    color: #777;
+}
+
+.titles {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 128px;
+}
+.titles p {
+    margin: 0;
+    font-size: 11px;
+    text-align: right;
+    line-height: 1.1;
+    color: #777;
+}
+.temp_title{
+    padding-top: 11px;
+}
+.feels_title{
+    padding-top:10px;
+}
+.wind_title{
+    padding-top: 23px;
+}
+.rain_title{
+    padding-top: 11px;
+}
+.snow_title{
+    padding-top: 5px;
+}
+
+.perHour_table{
+    width: 75%;
+    /* display: flex;
+    flex-direction: row; */
+}
+
+/* ////
+MEDIA
+//// */
+@media (max-width: 850px) {
+    .weather-table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tabs_days{
+        width: 90%;
+        padding-left: 15px;
+    }
+    .weather_content_box {
+        width: 95%;
+    }
+}
+
+@media (max-width: 790px){
+    .tabs_days{
+        padding-left: 10px;
+    }
+    .slick-arrow.slick-next {
+        right: -15px;
+    }
+}
+
+@media (max-width: 750px){
+    .root {
+        width: 100%;
+        max-width: none;
+        min-width: none;
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 730px){
+    .header_top{
+        flex-direction: column;
+    }
+    .logo{
+        width: fit-content;
+    }
+    .search{
+        width: 70%;
+        min-width: 400px;
+        margin-top: 20px;
+    }
+    .header_bottom{
+         margin-left: 50px;
+    }
 }

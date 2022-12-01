@@ -1,85 +1,3 @@
-.weather-table {
-    height: auto;
-    max-height: 550px;
-    min-height: 400px;
-    width: 100%;
-}
-
-.tabs_days{
-    height: 40%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-/* .slick-slide div{
-    margin: 0 10px;
-} */
-.tab_day{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid rgba(200, 200, 200, 0.62);
-    border-right-style: none;
-    cursor: pointer;
-}
-.tab_day:last-child{
-    border-right-style: solid;
-}
-.tab_day.active{
-    scale: 1.05;
-    box-shadow: 0 -7px 7px rgb(64 60 67 / 50%);
-    background-color: #fff;
-    z-index: 1;
-    border-bottom-style: none;
-    transform: translateY(3px);
-}
-
-.day_name{
-    margin-top: 10px;
-}
-.date{
-    margin: 5px 0;
-    font-weight: bold;
-    font-size: 24px;
-}
-.month{
-    margin-bottom: 10px;
-}
-.tab_day_condition_img img{
-    width: 60px;
-    height: 60px;
-    margin-top: 5px;
-}
-.max-min_temperature{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.max-min_temperature span{
-    border-left: 1px solid #dadce0;
-    height: 50px;
-    width: 0;
-    margin: 0 5px;
-}
-.max-min_temperature div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 38px;
-}
-.max-min_temperature p{
-    color: #9d9d9d;
-    font-size: 11px;
-}
-.max-min_temperature h3{
-    font-size: 17px;
-    color: #000;
-}
-
 /* ////////////////// */
 
 .weather_content_box{
@@ -157,6 +75,7 @@
     width: 35%;
     display: flex;
     flex-direction: column;
+    /* justify-content: end; */
     padding-top: 128px;
 }
 .titles p {

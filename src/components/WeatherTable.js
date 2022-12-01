@@ -1,6 +1,6 @@
 import TabsDays from "./TabsDays";
 import WeatherContent from "./WeatherContent";
-import "./WeatherTable.css";
+// import "./WeatherTable.css";
 
 function WeatherTable({
     currentConditions,

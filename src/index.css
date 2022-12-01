@@ -14,7 +14,8 @@ body {
   height: auto;
   max-height: 1050px;
   min-height: 900px;
-  width: auto;
-  max-width: 800px;
+  width: fit-content;
+  max-width: 900px;
   min-width: 650px;
+  margin: 10px 20px 40px 20px;
 }
