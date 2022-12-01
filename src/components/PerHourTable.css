@@ -8,6 +8,12 @@ table, tr, th, td {
     border-right: #dfdfdf 1px solid;
 }
 
+/* .perHour_table tbody{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
+
 .perHour_table tr{
     width: 100%;
     display: flex;
@@ -28,12 +34,59 @@ table, tr, th, td {
     background: #f2f2f2;
 }
 
-/* .icons{
-    
-} */
+/* Titles */
+.perHour_temperature, .perHour_feelsLike, .perHour_wind, .rain_chance, .snow_chance{
+    position: relative;
+}
+.perHour_temperature::before{
+    content: "Temp.,°C";
+    position: absolute;
+    top: 25%;
+    left: -45px;
+    color: #777;
+    font-size: 11px;
+}
+.perHour_feelsLike::before{
+    content: "Feels like";
+    position: absolute;
+    /* top: 25%; */
+    left: -47px;
+    color: #777;
+    font-size: 11px;
+}
+.perHour_wind::before{
+    content: "Wind, m/s";
+    position: absolute;
+    top: 25%;
+    left: -52px;
+    color: #777;
+    font-size: 11px;
+}
+.rain_chance::before{
+    content: "Rain probab.";
+    position: absolute;
+    top: 23%;
+    left: -64px;
+    color: #777;
+    font-size: 11px;
+}
+.snow_chance::before{
+    content: "Snow probab.";
+    position: absolute;
+    top: 20%;
+    left: -66px;
+    color: #777;
+    font-size: 11px;
+}
+/* Titles */
+
 .icons td {
     padding-top: 5px;
     width: 12.5%;
+}
+.icons td img{
+
+    width: 100%;
 }
 
 .perHour_temperature td, .perHour_feelsLike td, .perHour_wind td, .rain_chance td, .snow_chance td{
@@ -61,6 +114,27 @@ table, tr, th, td {
     padding: 4px 0;
     background-color: rgba(61, 184, 255, 0.252);
 }
-.snowChance td{
+.snow_chance td{
     padding: 4px 0;
+}
+
+
+/* MEDIA */
+@media (max-width: 505px){
+
+    .perHour_temperature td {
+        font-size: 15px;
+    }
+    .perHour_feelsLike td {
+        font-size: 10px;
+    }
+    .perHour_wind td{
+        font-size: 12px;
+    }
+    .rain_chance td{
+        font-size: 12px;
+    }
+    .snow_chance td{
+        font-size: 12px;
+    }
 }

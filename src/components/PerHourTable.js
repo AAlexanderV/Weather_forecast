@@ -14,7 +14,7 @@ function PerHourTable({ days, activeTabDay }) {
                     }
                     key={hour}
                 >
-                    {hour + " :00"}
+                    {hour + ":00"}
                 </th>
             );
         });

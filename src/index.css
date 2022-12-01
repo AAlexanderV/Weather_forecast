@@ -7,15 +7,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
-  height: 1100px;
+  height: auto;
+  margin-bottom: 200px;
 }
 
 .root{
   height: auto;
-  max-height: 1050px;
   min-height: 900px;
   width: fit-content;
   max-width: 900px;
   min-width: 650px;
   margin: 10px 20px 40px 20px;
+}
+
+@media (max-width: 750px){
+  .root {
+      width: 100%;
+      max-width: none;
+      min-width: 250px;
+      margin: 0;
+      padding: 10px;
+  }
 }
