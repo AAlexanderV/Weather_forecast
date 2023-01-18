@@ -12,7 +12,8 @@ function App() {
     const [isLoaded, setIsLoaded] = useState(false);
     const [weatherData, setweatherData] = useState([]);
 
-    const API = `https://api.weatherapi.com/v1/forecast.json?key=999cbaecd5a64a33985171242223011&q=${city}&days=${7}&aqi=no&alerts=no`;
+    // const API = `https://api.weatherapi.com/v1/forecast.json?key=999cbaecd5a64a33985171242223011&q=${city}&days=${7}&aqi=no&alerts=no`;
+    const API = `https://api.weatherapi.com/v1/forecast.json?key=c7ee0cc80be146ca8a4182556222412&q=${city}&days=${7}&aqi=no&alerts=no`;
 
     useEffect(() => {
         fetch(API)
@@ -47,10 +48,9 @@ function App() {
                         setIsLoaded={setIsLoaded}
                     />
                     <div className="header_bottom">
-                        <p>
-                            {error.message} Please check the correct spelling of
-                            the city.
-                        </p>
+                        <p>{error.message} Possible reasons:</p>
+                        <p>1. Incorrect city name.</p>
+                        <p>2. API keys expired.</p>
                     </div>
                 </div>
             </>
